@@ -4,6 +4,7 @@
 }
 
 body {
+    font-size: 20px;
     background: white;
     color: black;
     font-family: verdana;
@@ -42,7 +43,6 @@ a:hover{
 }
 
 #temas li{
-    
     background: white;
     color: dodgerblue;
 }
