@@ -40,3 +40,9 @@ a{
 a:hover{
     color: white;
 }
+
+#temas li{
+    
+    background: white;
+    color: dodgerblue;
+}
