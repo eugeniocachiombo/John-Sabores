@@ -34,6 +34,11 @@ body {
     color: white;
 }
 
+#ListaMenu li details:hover{
+    background: white;
+    color: white;
+}
+
 a{
     text-decoration: none;
 }
@@ -43,6 +48,8 @@ a:hover{
 }
 
 #temas li{
+    width: 100%;
     background: white;
     color: dodgerblue;
 }
+
