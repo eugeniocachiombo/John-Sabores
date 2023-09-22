@@ -9,4 +9,22 @@ body {
     font-family: verdana;
 }
 
+#ListaMenu li{
+    margin-top: 5px;
+    margin-bottom: -5px;
+    padding: 15px;
+    cursor: pointer;
+}
 
+#ListaMenu li:hover{
+    background: rgb(2, 111, 245);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
