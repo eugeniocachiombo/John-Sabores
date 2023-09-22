@@ -39,6 +39,23 @@ body {
     color: white;
 }
 
+#ListaMenuOff-Canvas li{
+    margin-top: 5px;
+    margin-bottom: -5px;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#ListaMenuOff-Canvas li:hover{
+    background: rgb(238, 203, 203);
+    color: dodgerblue;
+}
+
+#ListaMenuOff-Canvas li details:hover{
+    color: black;
+}
+
 a{
     text-decoration: none;
 }
@@ -48,6 +65,12 @@ a:hover{
 }
 
 #temas li{
+    width: 100%;
+    background: white;
+    color: dodgerblue;
+}
+
+#temasOff-canvas li{
     width: 100%;
     background: white;
     color: dodgerblue;
