@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema IV</title>
+    <link rel="stylesheet" href="../assets/fontawesome/css/all6.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all5.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</head>
+
+<body class="">
+
+    <header style="width: 100%; margin-left: 0;">
+        <div style="min-height: 5vh;">
+            <div class="col d-none d-flex justify-content-left align-items-center">
+                Menu
+            </div>
+
+            <div class="col d-flex d-md-none justify-content-end align-items-center">
+                <i class="fa-solid fa-bars p-1 m-2" id="barMenu" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop"></i>
+            </div>
+
+            <!--OFF CANVAS-->
+            <div class="offcanvas offcanvas-start text-white" style="background: lightcoral; width: 250px;"
+                id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasTopLabel"><b>Menu</b></h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body text-white ">
+                    <!--PAINEL-->
+                    <ul id="ListaMenuOff-Canvas" class="d-table" type="none" class="d-flex">
+                        <a href="../index.html">
+                            <li>Inicio</li>
+                        </a>
+                        <li>
+                            <details>
+                                <summary style="color: white">Receitas</summary>
+                                <ul type="none" id="temasOff-canvas">
+                                    <a href="../temas/temaI.html">
+                                        <li>Tema I</li>
+                                    </a>
+                                    <a href="../temas/temaII.html">
+                                        <li>Tema II</li>
+                                    </a>
+                                    <a href="../temas/temaIII.html">
+                                        <li>Tema III</li>
+                                    </a>
+                                    <a href="../temas/temaIV.html">
+                                        <li>Tema IV</li>
+                                    </a>
+                                    <a href="../temas/temaV.html">
+                                        <li>Tema V</li>
+                                    </a>
+                                </ul>
+                            </details>
+                        </li>
+                        <a href="">
+                            <li>PDF</li>
+                        </a>
+                        <a href="">
+                            <li>Sobre</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col d-none d-md-flex justify-content-end align-items-center">
+                <ul id="ListaMenu" class="d-flex" type="none" class="d-flex">
+                    <a href="../index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <li>
+                        <details>
+                            <summary style="color: dodgerblue">Receitas</summary>
+                            <ul type="none" id="temas">
+                                <a href="../temas/temaI.html">
+                                    <li>Tema I</li>
+                                </a>
+                                <a href="../temas/temaII.html">
+                                    <li>Tema II</li>
+                                </a>
+                                <a href="../temas/temaIII.html">
+                                    <li>Tema III</li>
+                                </a>
+                                <a href="../temas/temaIV.html">
+                                    <li>Tema IV</li>
+                                </a>
+                                <a href="../temas/temaV.html">
+                                    <li>Tema V</li>
+                                </a>
+                            </ul>
+                        </details>
+                    </li>
+                    <a href="">
+                        <li>PDF</li>
+                    </a>
+                    <a href="">
+                        <li>Sobre</li>
+                    </a>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class=" text-white d-flex justify-content-center align-items-center" id="divMenuLogo">
+
+            <div class=" d-none d-sm-flex justify-content-left align-items-center" style="width: 100%">
+                <div class=" col-2 border" style="border: 1px solid lightcoral">
+                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                </div>
+                <div class=" col px-5 d-flex justify-content-left align-items-center">
+                    <h2 style="border-bottom: 3px solid white">
+                        <b>Jonh Sabores na Cozinha</b>
+                    </h2>
+                </div>
+            </div>
+
+            <div class=" d-flex mx-2 d-sm-none justify-content-left align-items-center"
+                style="width: 100%; max-height: 10vh">
+                <div class=" col-2  border" style="border: 1px solid lightcoral">
+                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                </div>
+                <div class=" col px-3 d-flex justify-content-left align-items-center">
+                    <p style="border-bottom: 3px solid white">
+                        <b style="font-size: 16px">Jonh Sabores na Cozinha</b>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="  d-table justify-content-center align-items-center"
+            style="min-height: 52.3vh; text-align: justify; width: 100%">
+
+            <center>
+                <div class=" mt-5 mb-5" style="width: 80%">
+                    <div>
+                        <b>
+                            <p class="display-3 text-center" style="font-weight: bold">Tema IV</p>
+                        </b>
+                        <b>
+                            <p class="display-3 text-center" style="font-weight: bold">Bolos de moda</p>
+                        </b>
+                        <hr>
+                    </div>
+
+                    <div class=" d-table  " >
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo caseiro </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+                            <ul>
+                                <li>100gm de açúcar</li>
+                                <li>4 colher de manteiga</li>
+                                <li>3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo</li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol type="1" class=" text-md-start">
+                            <li class="pt-3  text-md-start">Começa por ligar o forno e ontar a forma com farinha e manteiga e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start">  Depois coloque a massa na forma e leve para o forno durante 45 a 50min.</li>
+                            <li class="pt-3 text-md-start">Depois de sair deixa esfriar, come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Imagem de Bolos"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Imagem de Bolos"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo de cóco </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>100gm de açúcar</li>
+                                <li>4 colher de manteiga</li>
+                                <li>3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo</li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>200gm de coco ralado</li>
+                                <li>1 lata de leite condensado.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e onta a forma com farinha e manteiga, e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start">Depois coloque a massa na forma e leve para o forno durante 45 a 50min.</li>
+                            <li class="pt-3  text-md-start">Depois de sair deixa esfriar e dispeija o leite por cima e purvilha o coco por cima, e aseguir come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0027.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0027.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo de ginguba </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>100gm de açúcar</li>
+                                <li>4 colher de manteiga</li>
+                                <li>3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo</li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>300gm de gingubas já discascadas</li>
+                                <li>1 lata de leite condensado</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e onta a forma com farinha e manteiga, e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start"> Depois coloque a massa na forma e leve para o forno durante 45 a 50min.</li>
+                            <li class="pt-3  text-md-start">Depois de sair deixa esfriar e Barra com o leite e purvilha as gingubas por toda parte do bolo, e aseguir come bem que vaz Amar.</li>
+
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0015.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0015.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo de chocolateá </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>100gm de açúcar</li>
+                                <li>4 colher de manteiga</li>
+                                <li>3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo</li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>200gm de chocolate em pó</li>
+                                <li>200gm de chocolate derretido.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e onta a forma com farinha e manteiga, e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e o chocolate em pó e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start"> Depois coloque a massa na forma e leve para o forno durante 45 a 50min. </li>
+                            <li class="pt-3 text-md-start">Depois de sair deixa esfriar barra com chocolate derretido e purvilha com pirpitas de chocolate, e aseguir come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Bolo de chocolate"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Bolo de chocolate"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo Rei </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>300ml de leite </li>
+                                <li>3 colher de fermento biológico</li>
+                                <li>2 ovos</li>
+                                <li>100gm de açúcar</li>
+                                <li>900gm de trigo</li>
+                                <li>3 colher de manteiga </li>
+                                <li>200gm de açúcar</li>
+                                <li>50gm coco ralado</li>
+                                <li>vários futros secos.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e pegar em uma tigela normal e coloque o leite o fermento e misture, em seguida acrescente os ovos e o leite e misture muito bem durante 30 segundos.</li>
+                            <li class="pt-3  text-md-start">Agora adiciona a farinha de trigo aos poucos e misture muito bem e deixa a massa descansar durante 20 min.</li>
+                            <li class="pt-3  text-md-start">Depois de discançar sova a massa e faça um bolinha grande corta ao meio e coloca todos os frutos secos por cima, e em seguida leve ao forno durante 45min.</li>
+                            <li class="pt-3 text-md-start"> Depois de sair, ja sabes a dica come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0025.jpg" alt="Bolo de chocolate"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0025.jpg" alt="Bolo de chocolate"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo pudim </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>2 latas de leite condensado </li>
+                                <li>6 ovos</li>
+                                <li>1ml de água.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">começa por pegar em uma tigela e misture o leite e os ovos mistura muito bem.</li>
+                            <li class="pt-3  text-md-start">Em seguida coloque a água em uma panela e coloque no fogo.</li>
+                            <li class="pt-3  text-md-start"> Agora despeja a mistura na forma e coloca na água e deixar ferver durante 2horas.</li>
+                            <li class="pt-3 text-md-start">Depois de fever disenforma e leva no frize , e em seguida come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0024.jpg" alt="Bolo de chocolate"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0024.jpg" alt="Bolo de chocolate"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo de ananás </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>100gm de açúcar</li>
+                                <li>4 colher de manteiga</li>
+                                <li> 3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo </li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>1 ananás já cortado em rodelas</li>
+                                <li>200gm de açúcar.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start">Depois onta a forma com caramelo de açúcar e as rodelas de ananás e coloca a massa e leva ao forno durante 45min.</li>
+                            <li class="pt-3 text-md-start">Depois de sair do forno tira da forma já quente e com muito cuidado, agora coloque no fixe e come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0023.jpg" alt="Bolo de chocolate"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0023.jpg" alt="Bolo de chocolate"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Cupcake caseiros </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>100gm de açúcar </li>
+                                <li>4 colher de manteiga</li>
+                                <li>3 ovos</li>
+                                <li>400ml de leite</li>
+                                <li>200gm de farinha de trigo</li>
+                                <li>2 colher de fermento</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>chocolate derretido</li>
+                                <li>1 colher de pirpitas.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por ligar o forno e ontar as formas com farinha e manteiga e pega em uma tigela e bata a manteiga e o açúcar , em seguida adicione os ovos e bata até ficar homogéneo.</li>
+                            <li class="pt-3  text-md-start">Agora adicione o leite e a farinha e bata muito bem, depois coloque a essência e o fermento e misture muito bem.</li>
+                            <li class="pt-3  text-md-start">Depois coloque a massa nas formas e leve para o forno durante 45 a 50min.</li>
+                            <li class="pt-3 text-md-start">Depois de sair deixa esfriar e faça a decoração ao seu jeito com um saco pastileiro, e depois come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Bolo  Cupcake"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Bolo  Cupcake"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo Chiffon </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>6 ovos separa agemas das claras</li>
+                                <li>100gm de Açúcar</li>
+                                <li>100gm de farinha de trigo</li>
+                                <li>3 colher de Maizena</li>
+                                <li>5 colher de óleo</li>
+                                <li>1 colher de essência de baunilha</li>
+                                <li>2 colher de fermento</li>
+                                <li>150ml de leite.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">começa por ligar o forno e em seguida pega uma tigela e bata as claras com o açúcar até esbranquissar , depois adicione o leite
+                                    e volta a bater.</li>
+                            <li class="pt-3  text-md-start">Agora adicione a farinha e a maizena aos poucos e bata durante 2min.</li>
+                            <li class="pt-3  text-md-start">Agora pega uma outra tigela e bata as claras até ficar bem firme.</li>
+                            <li class="pt-3 text-md-start">Agora folta para a massa e adicione a essência e o fermento e misture devagar com uma colher de pau.</li>
+                            <li class="pt-3 text-md-start">Em seguida adicione as claras na massa e misture muito bem e devagar e coloca no forno durante 50min.</li>
+                            <li class="pt-3 text-md-start">Depois de sair acompanha com um bom recheia, e sabes o que mas come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0021.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0021.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Bolo de aniversário </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>1 bolos chiffon de 15cm de altura</li>
+                                <li>chantilly branco já feito</li>
+                                <li>recheio de chocolate e de maracujá</li>
+                                <li>perulas doces.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">começa por pegar em uma bailarina e coloca uma rodela de cada vez e recheia.</li>
+                            <li class="pt-3  text-md-start">Depois de recheia coloque o papel acetado e deixe repousar 5 minutos, depois de repousar Barra o bolo com o chantilly e decora com as flores, depois disso leve ao frize, e quando sair come bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0020.jpg" alt="Bolo  Cupcake"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0020.jpg" alt="Bolo  Cupcake"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+        </div>
+    </main>
+
+    <footer class=" text-dark" style="min-height: 25vh; width: 100%; background: rgb(238, 203, 203)">
+        <div class="container">
+            <div class="row d-block d-md-flex" style="width: 100%; font-size: 14px">
+
+                <!--LOCALIZAÇÃO-->
+                <div class="col pt-4" style="height: auto;">
+                    <p class="h6 text-left ">
+                        <b>Localização</b>
+                        <hr>
+                    </p>
+                    <i class="fas fa-map-marker-alt" style="font-size:24px; margin-right: 20px;"></i>
+                    <div class="col text-left text-justify">
+                        <b>
+                            Província de Luanda <br>
+                            Município do Cazenga, Bairro da Mabor
+                        </b>
+                    </div>
+                    <hr>
+
+                </div>
+
+                <!--CONTACTOS-->
+                <div class="col pt-4" style="height: auto;">
+                    <p class="h6 text-left  "><b>Contactos</b>
+                        <hr>
+                    </p>
+
+                    <!--TELEFONE-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fas fa-phone " style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
+                        </b>
+                    </div> <br>
+
+                    <!--EMAIL EMPRESA-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fas fa-envelope" style="font-size:24px; margin-right: 20px"></i>
+                        <b>johnsabores842@gmail.com </b>
+                    </div> <br>
+
+                    <!--Whatsapp-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fab fa-whatsapp" style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
+                        </b>
+                    </div> <br>
+
+                    <!--Facebook-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fab fa-facebook" style="font-size:24px; margin-right: 20px"></i><b>John Sabores</b>
+
+                    </div> <br>
+                    <hr>
+                </div>
+
+                <!--DIREITOS-->
+                <div class="row text-center pt-5">
+                    <p>© JSC John Sabores na Cozinha 2023. Todos os direitos reservados.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
