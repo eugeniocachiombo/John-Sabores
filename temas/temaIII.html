@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema III</title>
+    <link rel="stylesheet" href="../assets/fontawesome/css/all6.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all5.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</head>
+
+<body class="">
+
+    <header style="width: 100%; margin-left: 0;">
+        <div style="min-height: 5vh;">
+            <div class="col d-none d-flex justify-content-left align-items-center">
+                Menu
+            </div>
+
+            <div class="col d-flex d-md-none justify-content-end align-items-center">
+                <i class="fa-solid fa-bars p-1 m-2" id="barMenu" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop"></i>
+            </div>
+
+            <!--OFF CANVAS-->
+            <div class="offcanvas offcanvas-start text-white" style="background: lightcoral; width: 250px;"
+                id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasTopLabel"><b>Menu</b></h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body text-white ">
+                    <!--PAINEL-->
+                    <ul id="ListaMenuOff-Canvas" class="d-table" type="none" class="d-flex">
+                        <a href="../index.html">
+                            <li>Inicio</li>
+                        </a>
+                        <li>
+                            <details>
+                                <summary style="color: white">Receitas</summary>
+                                <ul type="none" id="temasOff-canvas">
+                                    <a href="../temas/temaI.html">
+                                        <li>Tema I</li>
+                                    </a>
+                                    <a href="../temas/temaII.html">
+                                        <li>Tema II</li>
+                                    </a>
+                                    <a href="../temas/temaIII.html">
+                                        <li>Tema III</li>
+                                    </a>
+                                    <a href="../temas/temaIV.html">
+                                        <li>Tema IV</li>
+                                    </a>
+                                    <a href="../temas/temaV.html">
+                                        <li>Tema V</li>
+                                    </a>
+                                </ul>
+                            </details>
+                        </li>
+                        <a href="">
+                            <li>PDF</li>
+                        </a>
+                        <a href="">
+                            <li>Sobre</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col d-none d-md-flex justify-content-end align-items-center">
+                <ul id="ListaMenu" class="d-flex" type="none" class="d-flex">
+                    <a href="../index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <li>
+                        <details>
+                            <summary style="color: dodgerblue">Receitas</summary>
+                            <ul type="none" id="temas">
+                                <a href="../temas/temaI.html">
+                                    <li>Tema I</li>
+                                </a>
+                                <a href="../temas/temaII.html">
+                                    <li>Tema II</li>
+                                </a>
+                                <a href="../temas/temaIII.html">
+                                    <li>Tema III</li>
+                                </a>
+                                <a href="../temas/temaIV.html">
+                                    <li>Tema IV</li>
+                                </a>
+                                <a href="../temas/temaV.html">
+                                    <li>Tema V</li>
+                                </a>
+                            </ul>
+                        </details>
+                    </li>
+                    <a href="">
+                        <li>PDF</li>
+                    </a>
+                    <a href="">
+                        <li>Sobre</li>
+                    </a>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class=" text-white d-flex justify-content-center align-items-center" id="divMenuLogo">
+
+            <div class=" d-none d-sm-flex justify-content-left align-items-center" style="width: 100%">
+                <div class=" col-2 border" style="border: 1px solid lightcoral">
+                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                </div>
+                <div class=" col px-5 d-flex justify-content-left align-items-center">
+                    <h2 style="border-bottom: 3px solid white">
+                        <b>Jonh Sabores na Cozinha</b>
+                    </h2>
+                </div>
+            </div>
+
+            <div class=" d-flex mx-2 d-sm-none justify-content-left align-items-center"
+                style="width: 100%; max-height: 10vh">
+                <div class=" col-2  border" style="border: 1px solid lightcoral">
+                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                </div>
+                <div class=" col px-3 d-flex justify-content-left align-items-center">
+                    <p style="border-bottom: 3px solid white">
+                        <b style="font-size: 16px">Jonh Sabores na Cozinha</b>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="  d-table justify-content-center align-items-center"
+            style="min-height: 52.3vh; text-align: justify; width: 100%">
+
+            <center>
+                <div class=" mt-5 mb-5" style="width: 80%">
+                    <div>
+                        <b>
+                            <p class="display-3 text-center" style="font-weight: bold">Tema III</p>
+                        </b>
+                        <b>
+                            <p class="display-3 text-center" style="font-weight: bold">Recheios de moda</p>
+                        </b>
+                        <hr>
+                    </div>
+
+                    <div class=" d-table  " >
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Yougurte caseiro </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+                            <ul>
+                                <li>200 ml de água morna</li>
+                                <li>100 ml de água natural </li>
+                                <li>400gm de leite em pó </li>
+                                <li>50gm de iogurte natural</li>
+                                <li>200gm de açúcar.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol type="1" class=" text-md-start">
+                            <li class="pt-3  ">Começa por pegar uma tigela normal e coloque a água natural e o leite e bata com uma batideira electrica.</li>
+                            <li class="pt-3  text-md-start">Em seguida adicione a água morna e bata durante 1min, e depois coloque o iogurte já feito e bata novamente, depois de bater tapa muito bem de deixa descansar durante 8horas.</li>
+                            <li class="pt-3  text-md-start"> Depois de discansa coloque o açúcar e a essência e bata mas 1vez.</li>
+                            <li class="pt-3 text-md-start">Depois disso leve ao figufico , depois de sair do figurifico Toma bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Imagem de yougurte"
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/" alt="Imagem de yougurte"
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Musse de maracujá </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>2 pacotes de natas</li>
+                                <li>4 maracujas separe o sumo das sementes</li>
+                                <li>1 lata de leite condensado.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por pegar em uma tigela e bata as natas depois de ficar cremosa adiciona o leite e bata durante 1min.</li>
+                            <li class="pt-3  text-md-start">Em seguida adicione o sumo de maracujá e bata novamente, depois coloque as sementes por cima e leve ao figufico.</li>
+                            <li class="pt-3  text-md-start">Depois de sair toma bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0011.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0011.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Recheio de chocolate </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>4 latas de leite condensado </li>
+                                <li>8 colher de manteiga</li>
+                                <li>300gm de chocolate em pó.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Em uma panela coloque o leite a manteiga e o chocolate em pó mistura muito bem e leve ao fogo e daí misturando sem parar.</li>
+                            <li class="pt-3  text-md-start"> Depois da fervura do chocolate baixar disliga o fogo e leve ao figufico.</li>
+                            <li class="pt-3  text-md-start">Depois de sair do figurifico recheia bem que vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0013.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0013.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+
+            <center>
+                <div class="mb-5" style="width: 80%">
+                    <div class=" d-table  ">
+                        <div class="text-center text-md-start pb-3">
+                            <h1 class="text-primary text-md-start"> Recheio de maracujá </h1>
+                            <h4 class="text-danger text-md-start"> "John Sabores" </h4>
+                        </div>
+
+                        <div class="text-start">
+                            <span class="text-primary ">
+                                <b>Ingredientes:</b>
+                            </span>
+
+                            <ul>
+                                <li>2 pacotes de natas</li>
+                                <li>1 lata de leite condensado</li>
+                                <li>1 pacote de sumo de Maracujá em pó</li>
+                                <li>1 maracujá</li>
+                                <li>3 colher de leite em pó.</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-start pt-3 pb-3" style="margin-bottom: -20px; font-weight: bold">
+                            Como fazer: </p>
+                        <ol style="font-weight: none">
+                            <li class="pt-3 text-md-start">Começa por pegar em uma tigela normal e coloque 1 pacote de natas e bata, depois adicione o leite e bata mas 1 min, também adicione o sumo em pó e bata novamente.
+                                </li>
+                            <li class="pt-3  text-md-start">Depois disso pegue uma outra tigela normal e coloque a nata e bata depois coloca o leite e volta a bater.</li>
+                            <li class="pt-3  text-md-start"> Depois de bater junta tudo e misture, em seguida coloque a maracujá e misture, depois leve ao Figurifico.
+                                </li>
+                            <li class="pt-3 text-md-start">Depois de levar no figurifico recheia bem que Vaz Amar.</li>
+                        </ol>
+
+                        <div class="mb-3 col-7 col-md-2 text-center text-md-start" style="width: 100%">
+                            <div class="pt-5 d-none d-md-block pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0012.jpg" alt=""
+                                    style="width: 70%">
+                            </div>
+                            <div class="pt-5 d-block d-md-none  pb-5 col-md-6">
+                                <img class="img-fluid" src="../assets/img/fotos_produtos/IMG-20230923-WA0012.jpg" alt=""
+                                    style="width: 260px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+            </center>
+        </div>
+    </main>
+
+    <footer class=" text-dark" style="min-height: 25vh; width: 100%; background: rgb(238, 203, 203)">
+        <div class="container">
+            <div class="row d-block d-md-flex" style="width: 100%; font-size: 14px">
+
+                <!--LOCALIZAÇÃO-->
+                <div class="col pt-4" style="height: auto;">
+                    <p class="h6 text-left ">
+                        <b>Localização</b>
+                        <hr>
+                    </p>
+                    <i class="fas fa-map-marker-alt" style="font-size:24px; margin-right: 20px;"></i>
+                    <div class="col text-left text-justify">
+                        <b>
+                            Província de Luanda <br>
+                            Município do Cazenga, Bairro da Mabor
+                        </b>
+                    </div>
+                    <hr>
+
+                </div>
+
+                <!--CONTACTOS-->
+                <div class="col pt-4" style="height: auto;">
+                    <p class="h6 text-left  "><b>Contactos</b>
+                        <hr>
+                    </p>
+
+                    <!--TELEFONE-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fas fa-phone " style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
+                        </b>
+                    </div> <br>
+
+                    <!--EMAIL EMPRESA-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fas fa-envelope" style="font-size:24px; margin-right: 20px"></i>
+                        <b>johnsabores842@gmail.com </b>
+                    </div> <br>
+
+                    <!--Whatsapp-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fab fa-whatsapp" style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
+                        </b>
+                    </div> <br>
+
+                    <!--Facebook-->
+                    <div class="col d-flex justify-content-left align-items-center">
+                        <i class="fab fa-facebook" style="font-size:24px; margin-right: 20px"></i><b>John Sabores</b>
+
+                    </div> <br>
+                    <hr>
+                </div>
+
+                <!--DIREITOS-->
+                <div class="row text-center pt-5">
+                    <p>© JSC John Sabores na Cozinha 2023. Todos os direitos reservados.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
