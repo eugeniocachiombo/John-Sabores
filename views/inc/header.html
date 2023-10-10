@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PDF</title>
-    <link rel="stylesheet" href="../assets/fontawesome/css/all6.css">
-    <link rel="stylesheet" href="../assets/fontawesome/css/all5.css">
-    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/css/PDF.css">
-    <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
-</head>
-
-<body class="">
-
-    <header style="width: 100%; margin-left: 0;">
+<header style="width: 100%; margin-left: 0;">
         <div style="min-height: 5vh;">
             <div class="col d-none d-flex justify-content-left align-items-center">
                 Menu
@@ -38,7 +22,11 @@
                 <div class="offcanvas-body text-white ">
                     <!--PAINEL-->
                     <ul id="ListaMenuOff-Canvas" class="d-table" type="none" class="d-flex">
-                        <a href="../index.html">
+                        
+                        <div id="modoTelaPequena"></div>
+                        <script> $("#modoTelaPequena").load("../addMode/modoEscuroClaro.html"); </script>
+
+                        <a href="../inicio/">
                             <li>Inicio</li>
                         </a>
                         <li>
@@ -63,7 +51,7 @@
                                 </ul>
                             </details>
                         </li>
-                        <a href="../PDF/index.html">
+                        <a href="../PDF/">
                             <li>PDF</li>
                         </a>
                         <a class="btn text-primary"
@@ -77,7 +65,11 @@
 
             <div class="col d-none d-md-flex justify-content-end align-items-center">
                 <ul id="ListaMenu" class="d-flex" type="none" class="d-flex">
-                    <a href="../index.html">
+                    
+                    <div id="modoTelaGrande"></div>
+                    <script> $("#modoTelaGrande").load("../addMode/modoEscuroClaro.html"); </script>
+                    
+                    <a href="../inicio/">
                         <li>Inicio</li>
                     </a>
                     <li>
@@ -102,7 +94,7 @@
                             </ul>
                         </details>
                     </li>
-                    <a href="../PDF/index.html">
+                    <a href="../PDF/">
                         <li>PDF</li>
                     </a>
 
@@ -120,7 +112,7 @@
 
             <div class=" d-none d-sm-flex justify-content-left align-items-center" style="width: 100%">
                 <div class=" col-2 border" style="border: 1px solid lightcoral">
-                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                    <img src="../../assets/img/logo.jpg" alt="" style="width: 100%">
                 </div>
                 <div class=" col px-5 d-flex justify-content-left align-items-center">
                     <h2 style="border-bottom: 3px solid white">
@@ -132,7 +124,7 @@
             <div class=" d-flex mx-2 d-sm-none justify-content-left align-items-center"
                 style="width: 100%; max-height: 10vh">
                 <div class=" col-2  border" style="border: 1px solid lightcoral">
-                    <img src="../assets/img/logo.jpg" alt="" style="width: 100%">
+                    <img src="../../assets/img/logo.jpg" alt="" style="width: 100%">
                 </div>
                 <div class=" col px-3 d-flex justify-content-left align-items-center">
                     <p style="border-bottom: 3px solid white">
@@ -142,107 +134,4 @@
             </div>
 
         </div>
-    </header>
-
-    <main>
-        <div class="  d-flex justify-content-center align-items-center"
-            style="min-height: 52.3vh; text-align: justify; width: 100%">
-
-            <center>
-                <div class=" mt-5 mb-5" style="width: 80%">
-                    <h1>Arquivos PDF disponíveis para Download</h1>
-                    <a href="../assets/PDF/doces_caseiros.pdf">Tema I: Doces Caseiros</a> <br>
-                    <a href="../assets/PDF/salgados_caseiros.pdf">Tema II: Salgados Caseiros</a> <br>
-                    <a href="../assets/PDF/recheios_de_moda.pdf">Tema III: Recheios de Moda</a> <br>
-                    <a href="../assets/PDF/bolos_de_moda.pdf">Tema VI: Bolos de Moda</a> <br>
-                    <a href="../assets/PDF/pratos_saudaveis.pdf">Tema V: Pratos Saudáveis</a> <br>
-                </div>
-            </center>
-        </div>
-    </main>
-
-    <footer class="pb-2 text-dark" style="min-height: 25vh; width: 100%; background: rgb(238, 203, 203)">
-        <div class="container">
-            <div class="row d-block d-md-flex" style="width: 100%; font-size: 14px">
-
-                <!--LOCALIZAÇÃO-->
-                <div class="col pt-4" style="height: auto;">
-                    <p class="h6 text-left ">
-                        <b>Localização</b>
-                        <hr>
-                    </p>
-                    <i class="fas fa-map-marker-alt" style="font-size:24px; margin-right: 20px;"></i>
-                    <div class="col text-left text-justify">
-                        <b>
-                            Província de Luanda <br>
-                            Município do Cazenga, Bairro da Mabor
-                        </b>
-                    </div>
-                    <hr>
-
-                </div>
-
-                <!--CONTACTOS-->
-                <div class="col pt-4" style="height: auto;">
-                    <p class="h6 text-left  "><b>Contactos</b>
-                        <hr>
-                    </p>
-
-                    <!--TELEFONE-->
-                    <div class="col d-flex justify-content-left align-items-center">
-                        <i class="fas fa-phone " style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
-                        </b>
-                    </div> <br>
-
-                    <!--EMAIL EMPRESA-->
-                    <div class="col d-flex justify-content-left align-items-center">
-                        <i class="fas fa-envelope" style="font-size:24px; margin-right: 20px"></i>
-                        <b>johnsabores842@gmail.com </b>
-                    </div> <br>
-
-                    <!--Whatsapp-->
-                    <div class="col d-flex justify-content-left align-items-center">
-                        <i class="fab fa-whatsapp" style="font-size:24px; margin-right: 20px"></i> <b> +244 941576418
-                        </b>
-                    </div> <br>
-
-                    <!--Facebook-->
-                    <div class="col d-flex justify-content-left align-items-center">
-                        <i class="fab fa-facebook" style="font-size:24px; margin-right: 20px"></i><b>John Sabores</b>
-
-                    </div> <br>
-                    <hr>
-                </div>
-
-                <!--DIREITOS-->
-                <div class="row text-center pt-5">
-                    <p>© JSC John Sabores na Cozinha 2023. Todos os direitos reservados.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background: lightpink;">
-            <div class="modal-header">
-                <h5 class="modal-title d-flex justify-content-center align-items-center" id="staticBackdropLabel">
-                    <i class=" pt-3 "><b>Sobre</b></i> </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-dark" style="background: lightpink;">
-                Um empresa para suporte de vários confeiteiros, fornecendo receitas caseiras. <br><br><br>
-
-                <b> <i class="fas fa-user"></i> Proprietário:</b> João Baptista Cachiombo <br>
-                <b> <i class="fab fa-dev"></i> Desenvolvedor:</b> Eugénio Cachiombo <br>
-            </div>
-        </div>
-    </div>
-</div>
+</header>
