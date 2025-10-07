@@ -1,6 +1,5 @@
 @include('inc/headHTML')
 @include('inc/header')
-@include('inc/nav')
 
 {{ $slot }}
 

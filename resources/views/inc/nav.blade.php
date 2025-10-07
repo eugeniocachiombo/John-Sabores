@@ -1,102 +1,20 @@
-<div style="min-height: 5vh;">
-    <div class="col d-none d-flex justify-content-left align-items-center">
-        Menu
-    </div>
+<ul id="ListaMenu" class="d-block d-md-flex gap-4 m-0 p-0" type="none">
+    @include('inc.darkmode')
 
-    <div class="col d-flex d-md-none justify-content-end align-items-center">
-        <i class="fa-solid fa-bars p-1 m-2" id="barMenu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"></i>
-    </div>
+    <li><a href="{{ url('inicio') }}" class="menu-link text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-house me-1"></i> Início</a></li>
 
-    <!--OFF CANVAS-->
-    <div class="offcanvas offcanvas-start text-white" style="background: lightcoral; width: 250px;" id="offcanvasTop"
-        aria-labelledby="offcanvasTopLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasTopLabel"><b>Menu</b></h5>
-            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+    <li><a href="{{ url('inicio') }}" class="menu-link text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-utensils me-1"></i> Receitas</a></li>
 
-        <div class="offcanvas-body text-white ">
-            <!--PAINEL-->
-            <ul id="ListaMenuOff-Canvas" class="d-table" type="none" class="d-flex">
 
-                @include('inc/darkmode')
+    <li><a href="{{ url('PDF') }}" class="menu-link text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-file-pdf me-1"></i> PDF</a></li>
 
-                <a href="../inicio/">
-                    <li>Inicio</li>
-                </a>
-                <li>
-                    <details>
-                        <summary style="color: white">Receitas</summary>
-                        <ul type="none" id="temasOff-canvas">
-                            <a href="../temas/temaI.html">
-                                <li>Tema I</li>
-                            </a>
-                            <a href="../temas/temaII.html">
-                                <li>Tema II</li>
-                            </a>
-                            <a href="../temas/temaIII.html">
-                                <li>Tema III</li>
-                            </a>
-                            <a href="../temas/temaIV.html">
-                                <li>Tema IV</li>
-                            </a>
-                            <a href="../temas/temaV.html">
-                                <li>Tema V</li>
-                            </a>
-                        </ul>
-                    </details>
-                </li>
-                <a href="../PDF/">
-                    <li>PDF</li>
-                </a>
-                <a class="btn text-primary"
-                    style="padding-left: 0; padding-right: 0; font-size: 20px;font-family: verdana;"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <li>Sobre</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-    <div class="col d-none d-md-flex justify-content-end align-items-center">
-        <ul id="ListaMenu" class="d-flex" type="none" class="d-flex">
-
-            @include('inc/darkmode')
-
-            <a href="../inicio/">
-                <li>Inicio</li>
-            </a>
-            <li>
-                <details>
-                    <summary style="color: dodgerblue">Receitas</summary>
-                    <ul type="none" id="temas">
-                        <a href="../temas/temaI.html">
-                            <li>Tema I</li>
-                        </a>
-                        <a href="../temas/temaII.html">
-                            <li>Tema II</li>
-                        </a>
-                        <a href="../temas/temaIII.html">
-                            <li>Tema III</li>
-                        </a>
-                        <a href="../temas/temaIV.html">
-                            <li>Tema IV</li>
-                        </a>
-                        <a href="../temas/temaV.html">
-                            <li>Tema V</li>
-                        </a>
-                    </ul>
-                </details>
-            </li>
-            <a href="../PDF/">
-                <li>PDF</li>
-            </a>
-
-            <a class="btn text-primary" style="padding-top: 0; padding-bottom: 0; font-size: 20px;font-family: verdana;"
-                data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <li>Sobre</li>
-            </a>
-        </ul>
-
-    </div>
-</div>
+    <li>
+        <a class="menu-link text-white fw-semibold text-decoration-none" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <i class="fa-solid fa-info-circle me-1"></i> Sobre
+        </a>
+    </li>
+</ul>
