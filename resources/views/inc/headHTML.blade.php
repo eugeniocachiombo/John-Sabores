@@ -11,6 +11,7 @@
 
     <title>@yield('title')</title>
 
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo.jpg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all6.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.2-dist/css/bootstrap.css') }}">
