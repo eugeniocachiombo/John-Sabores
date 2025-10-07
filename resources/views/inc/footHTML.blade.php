@@ -1,25 +1,26 @@
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background: lightpink;">
-            <div class="modal-header">
-                <h5 class="modal-title d-flex justify-content-center align-items-center" id="staticBackdropLabel">
-                    <i class=" pt-3 "><b>Sobre</b></i>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    <i class="fas fa-info-circle me-2"></i> Sobre a Empresa
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Fechar"></button>
             </div>
-            <div class="modal-body text-dark" style="background: lightpink;">
-                Uma empresa para suporte de vários confeiteiros, fornecendo receitas caseiras. <br><br><br>
-
-
-                <b> <i class="fas fa-user"></i> Proprietário:</b> João Baptista Cachiombo <br>
-                <b> <i class="fab fa-dev"></i> Desenvolvedor:</b> Eugénio Cachiombo <br>
+            <div class="modal-body">
+                <p>Uma empresa criada para apoiar confeiteiros, oferecendo receitas caseiras e de fácil preparo.</p>
+                <ul class="list-unstyled">
+                    <li><b><i class="fas fa-user me-2 text-primary"></i> Proprietário:</b> João Baptista Cachiombo</li>
+                    <li><b><i class="fab fa-dev me-2 text-success"></i> Desenvolvedor:</b> Eugénio Cachiombo</li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
+@livewireScripts
 </body>
 
 </html>
