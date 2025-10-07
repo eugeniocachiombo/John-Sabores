@@ -61,6 +61,29 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     }
 
+     /* Hover do ícone */
+    .nav-link:hover .fa {
+        transform: rotate(10deg) scale(1.2);
+        color: #fff6f6;
+    }
+
+    /* Linha decorativa em hover */
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 10%;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease-in-out;
+        border-radius: 2px;
+    }
+
+    .nav-link:hover::after {
+        width: 80%;
+    }
+
     .dashboard-content {
       padding: 30px;
     }

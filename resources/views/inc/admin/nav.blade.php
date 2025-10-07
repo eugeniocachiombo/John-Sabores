@@ -7,5 +7,3 @@
     <a href="#" class="nav-link"><i class="fa fa-cog me-2"></i> Configurações</a>
     <a href="#" class="nav-link text-danger"><i class="fa fa-sign-out-alt me-2"></i> Sair</a>
 </nav>
-
-
