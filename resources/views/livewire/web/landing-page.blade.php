@@ -1,57 +1,62 @@
-@section("title", "Página Inicial")
+@section('title', 'Página Inicial')
 <div>
     <main>
-        <div class="  d-table justify-content-center align-items-center"
-            style="min-height: 52.3vh; text-align: justify; width: 100%">
-            <div class="col mt-5 mb-5 p-5 ">
-                <center>
-                    <div>
-                        <h1><b>Seja Bem-Vindo</b></h1>
-                        <h1><b>Receitas de Confeitarias</b></h1>
-                        <div class="col pt-5">
-                            <img src="../../assets/img/logo.jpg" alt="" style="width: 200px">
-                        </div>
-                    </div>
+        <div class="container-fluid p-0">
+            <!-- Seção de boas-vindas -->
+            <section class="hero d-flex flex-column justify-content-center align-items-center text-center text-dark py-5"
+                style="min-height: 60vh; background: linear-gradient(135deg, #fff7f7, #ffe5e5);">
+                <div class="content">
+                    <h1 class="fw-bold display-5 mb-3 animate__animated animate__fadeInDown">Seja Bem-Vindo</h1>
+                    <h2 class="fw-semibold mb-4 animate__animated animate__fadeInUp">Receitas de Confeitarias</h2>
 
-                    <div class="pt-5 d-flex justify-content-center">
+                    <img src="../../assets/img/logo.jpg" alt="Logo"
+                        class="img-fluid shadow rounded-circle my-4 animate__animated animate__zoomIn"
+                        style="width: 180px">
+
+                    <p class="lead text-muted animate__animated animate__fadeInUp"
+                        style="max-width: 600px; margin: auto;">
                         Detalhamos receitas para facilitar a vida de alguns confeiteiros.
-                    </div>
-                </center>
-            </div>
+                    </p>
+                </div>
+            </section>
 
-            <div class="col-12 mt-5 mb-5 p-5 text-white" style="width: 100%; background: lightcoral">
-                <center>
-                    <div>
-                        <h1><b>Temos para si, as melhores receitas caseiras</b></h1>
-                        <div class="col pt-5">
-                            <img class="img-fluid rounded-circle" src="../../assets/img/bolo.jpg" alt=""
-                                style="width: 200px">
-                        </div>
-                    </div>
+            <!-- Seção de destaque -->
+            <section class="text-white text-center py-5"
+                style="background: linear-gradient(135deg, #ff5f6d, #ffc371); position: relative;">
+                <div class="container">
+                    <h1 class="fw-bold mb-4 animate__animated animate__fadeInDown">Temos para si, as melhores receitas
+                        caseiras</h1>
 
-                    <div class="pt-5 d-flex justify-content-center">
-                        Bolo de aniversário feito com carinho e muito amor, aqui em John sabores.
-                    </div>
-                </center>
-            </div>
+                    <img class="img-fluid rounded-circle shadow-lg animate__animated animate__zoomIn"
+                        src="../../assets/img/bolo.jpg" alt="Bolo caseiro" style="width: 200px;">
 
-            <div class="col-12 mt-5 mb-5 p-5 " style="width: 100%; ">
-                <center>
-                    <div id="tamaI">
-                        <h1><b>Temas</b></h1>
-                        <div class="col pt-5">
-                            <img class="img-fluid rounded-circle"
-                                src="../../assets/img/fotos_produtos/IMG-20230923-WA0014.jpg" alt=""
-                                style="width: 200px">
-                        </div>
-                    </div>
+                    <p class="pt-4 fs-5 animate__animated animate__fadeInUp">
+                        Bolo de aniversário feito com carinho e muito amor, aqui em <strong>John Sabores</strong>.
+                    </p>
+                </div>
+            </section>
 
-                    <div class="pt-5 d-flex justify-content-center">
-                        Para as receitas caseiras, reservamos 5 temas onde cada tema possui receitas diferentes para ser
-                        aplicada em sua confeitaria.
-                    </div>
-                </center>
-            </div>
+            <!-- Seção de temas -->
+            <section class="text-center py-5" style="background: #fff;">
+                <div class="container">
+                    <h1 class="fw-bold mb-4 animate__animated animate__fadeInDown">Temas</h1>
+
+                    <img class="img-fluid rounded-circle shadow animate__animated animate__zoomIn"
+                        src="../../assets/img/fotos_produtos/IMG-20230923-WA0014.jpg" alt="Temas"
+                        style="width: 200px;">
+
+                    <p class="pt-4 fs-5 text-muted animate__animated animate__fadeInUp"
+                        style="max-width: 700px; margin: auto;">
+                        Para as receitas caseiras, reservamos <strong>5 temas</strong> onde cada um possui receitas
+                        únicas para
+                        inspirar e elevar o sabor da sua confeitaria.
+                    </p>
+                </div>
+            </section>
         </div>
     </main>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </div>
