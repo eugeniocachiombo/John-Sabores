@@ -16,7 +16,7 @@ class UserAdminSeed extends Seeder
     {
        User::create([
             'name' => 'João Baptista Cachiombo',
-            'email' => 'baptista@jonhsabores.com',
+            'email' => 'baptista@johnsabores.com',
             'password' => Hash::make("123456"),
             'access_id' => 1,
         ]);

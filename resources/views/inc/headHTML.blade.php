@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/PDF.css') }}">
     <script src="{{ asset('assets/bootstrap-5.0.2-dist/js/bootstrap.js ') }}"></script>
     <script src="{{ asset('assets/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+    <script src="{{ asset('assets/js/run_sweetalert.js') }}"></script>
     @livewireStyles
 </head>
 
