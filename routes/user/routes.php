@@ -9,9 +9,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix("administrador")->name("admin.")->group(function(){
-    Route::get("/painel", AdminDashboard::class)->name("dashboard");
-})->middleware(RequireLogin::class);
+    Route::get("/painel", AdminDashboard::class)->name("dashboard")->middleware(RequireLogin::class);
+});
 
-Route::get("/login", Login::class)->name("login")
-->middleware(DontRequireLogin::class);
+Route::get("/login", Login::class)->name("login")->middleware(DontRequireLogin::class);
 
