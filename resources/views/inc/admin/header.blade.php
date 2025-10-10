@@ -12,7 +12,7 @@
             data-bs-target="#menuMobile"></i>
 
         <div class="d-none d-md-block">
-            <i class="fa fa-user-circle me-2"></i> <span>Admin</span>
+            <i class="fa fa-user-circle me-2"></i> <span>{{ auth()->user()->name }}</span>
         </div>
     </div>
 </header>
