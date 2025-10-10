@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\Log;
 
-class ErrorMessage
+class FeedbackService
 {
 
     public static function register_log($th)
@@ -13,14 +13,16 @@ class ErrorMessage
         Log::error($th->getMessage());
     }
 
-    public static function sweetalert()
+    public static function fail($icon = null, $title = null, $description = null)
     {
         return [
-            "icon" => "error",
-            "title" => "Erro!",
-            "html" => "<b>Falha ao realizar operação</b>",
+            "icon" => $icon ?? "error",
+            "title" => $title ?? "Erro!",
+            "html" =>  "<b>".  $description ?? 'Falha ao realizar operação' ."</b>",
             "btn" => true,
             "timer" => 40000,
         ];
     }
+
+    
 }

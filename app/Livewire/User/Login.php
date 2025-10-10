@@ -3,6 +3,7 @@
 namespace App\Livewire\User;
 
 use App\Services\ErrorMessage;
+use App\Services\FeedbackService;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -24,10 +25,11 @@ class Login extends Component
     public function render()
     {
         return view('livewire.user.login')
-        ->layout("components.layouts.auth.app");
+            ->layout("components.layouts.auth.app");
     }
 
-    public function auth(){
+    public function auth()
+    {
         $this->validate();
 
         try {
@@ -40,12 +42,12 @@ class Login extends Component
             if (Auth::attempt($credentials)) {
                 return redirect()->route("admin.dashboard");
             } else {
-                dd("Utilizador não encontrado");
+                $this->dispatch("sweetalert", FeedbackService::fail("warning", "Usuário não encontrado", "Verifique seu email e a senha"));
             }
-            
+
         } catch (\Throwable $th) {
-            ErrorMessage::register_log($th);
-            $this->dispatch("sweetalert", ErrorMessage::sweetalert());
+            FeedbackService::register_log($th);
+            $this->dispatch("sweetalert", FeedbackService::fail());
         }
     }
 }

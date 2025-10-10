@@ -3,6 +3,7 @@
 namespace App\Livewire\User;
 
 use App\Services\ErrorMessage;
+use App\Services\FeedbackService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
@@ -22,8 +23,8 @@ class Logout extends Component
             return redirect()->route("web.home");
 
         } catch (\Throwable $th) {
-            ErrorMessage::register_log($th);
-            $this->dispatch("sweetalert", ErrorMessage::sweetalert());
+            FeedbackService::register_log($th);
+            $this->dispatch("sweetalert", FeedbackService::fail());
         }
     }
 }
