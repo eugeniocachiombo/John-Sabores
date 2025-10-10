@@ -5,5 +5,5 @@
     <a href="#" class="nav-link"><i class="fa fa-utensils me-2"></i> Receitas</a>
     <a href="#" class="nav-link"><i class="fa fa-users me-2"></i> Usuários</a>
     <a href="#" class="nav-link"><i class="fa fa-cog me-2"></i> Configurações</a>
-    <a href="#" class="nav-link text-danger"><i class="fa fa-sign-out-alt me-2"></i> Sair</a>
+    @livewire("user.logout")
 </nav>
