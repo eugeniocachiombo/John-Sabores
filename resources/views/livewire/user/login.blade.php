@@ -21,7 +21,7 @@
                 @enderror
             </div>
             <button type="submit" class="btn-login mt-2">
-                <i wire:loading wire:target="auth" class="fas fa-spinner fa-spin"></i>
+                <span wire:loading wire:target="auth" class="spinner-border spinner-border-sm me-1"></span>
                 <span wire:loading.remove wire:target="auth">Entrar</span>
             </button>
         </form>

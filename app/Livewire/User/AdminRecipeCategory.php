@@ -100,7 +100,7 @@ class AdminRecipeCategory extends Component
         $this->id = $id;
         $this->dispatch("sweetalert", FeedbackService::confirm(
             "warning",
-            "Tens a Certeza Que Deseja Eliminar?",
+            "Tens a Certeza?",
             'Após eliminar, será impossível reverter esta acção',
             "Confirmar",
             "Cancelar",

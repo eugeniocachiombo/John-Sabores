@@ -42,7 +42,7 @@ class Login extends Component
             if (Auth::attempt($credentials)) {
                 return redirect()->route("admin.dashboard");
             } else {
-                $this->dispatch("sweetalert", FeedbackService::fail("warning", "Usuário não encontrado", "Verifique seu email e a senha"));
+                $this->dispatch("sweetalert", FeedbackService::fail("warning", "Usuário não encontrado", "Verifique o seu email e a senha"));
             }
 
         } catch (\Throwable $th) {
