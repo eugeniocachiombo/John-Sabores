@@ -12,7 +12,7 @@ class AdminRecipeCategory extends Component
 {
     use WithPagination;
 
-    public $description, $id = null;
+    public $description, $id = null, $search = '';
 
     protected $rules = [
         'description' => 'required|unique:recipe_categories,description',
@@ -26,11 +26,24 @@ class AdminRecipeCategory extends Component
     public function render()
     {
         return view('livewire.user.admin-recipe-category', [
-            'categories' => RecipeCategory::orderBy("description", "asc")->paginate(5),
+            'categories' => $this->getCategories(),
         ])
-            ->layout("components.layouts.admin.app");
+        ->layout("components.layouts.admin.app");
     }
 
+    public function getCategories(){
+        try {
+            $query =  RecipeCategory::orderBy("description", "asc");
+
+            if ($this->search) {
+                $query->where("description", "like", "%".$this->search."%");
+            }
+            return $query->paginate(5);
+        } catch (\Throwable $th) {
+            FeedbackService::register_log($th);
+            $this->dispatch("sweetalert", FeedbackService::fail());
+        }
+    }
 
     public function store()
     {

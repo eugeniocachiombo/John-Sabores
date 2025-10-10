@@ -57,6 +57,33 @@
         .text-pink {
             color: #ff4f78;
         }
+
+        /* 🔎 Filtro estilizado */
+        .filter-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(255, 105, 135, 0.1);
+        }
+
+        .filter-box input {
+            border-radius: 10px;
+        }
+
+
+        .pagination .page-item.active .page-link {
+            background-color: #ff7b9c;
+            border-color: #ff7b9c;
+        }
+
+        .pagination .page-link {
+            color: #ff4f78;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #ffe4ec;
+            color: #ff4f78;
+        }
     </style>
 
     <div class="container-fluid mt-4">
@@ -67,7 +94,16 @@
             </button>
         </div>
 
-        {{-- Tabela de Categorias --}}
+        <div class="filter-box mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <label for="search" class="form-label fw-semibold text-pink mb-1">Pesquisar Categoria</label>
+                    <input type="text" id="search" wire:model.live="search" class="form-control"
+                        placeholder="Digite o nome da categoria...">
+                </div>
+            </div>
+        </div>
+
         <div class="card card-custom">
             <div class="card-body">
                 <table class="table table-hover align-middle mb-0">
@@ -89,10 +125,10 @@
                                     <button class="btn btn-sm btn-light-pink me-1" data-bs-toggle="modal"
                                         data-bs-target="#createCategoryModal"
                                         wire:click.prevent="edit({{ $category->id }})">
-                                        <i class="fas fa-pencil-square " style="font-size: 18px"></i>
+                                        <i class="fas fa-pencil-square" style="font-size: 18px"></i>
                                     </button>
                                     <button class="btn btn-sm btn-light-pink" wire:click="delete({{ $category->id }})">
-                                        <i class="fas fa-trash " style="font-size: 18px"></i>
+                                        <i class="fas fa-trash" style="font-size: 18px"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -114,13 +150,14 @@
         </div>
     </div>
 
-    {{-- Modal de Cadastro --}}
     <div wire:ignore.self class="modal fade" id="createCategoryModal" tabindex="-1"
         aria-labelledby="createCategoryModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content shadow-lg">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createCategoryModalLabel">Cadastrar Categoria</h5>
+                    <h5 class="modal-title" id="createCategoryModalLabel">
+                        {{ $id != null ? 'Editar Categoria' : 'Cadastrar Categoria' }}
+                    </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Fechar"></button>
                 </div>
@@ -148,6 +185,7 @@
         </div>
     </div>
 </div>
+
 <script>
     window.addEventListener('close-modal', () => {
         const modal = bootstrap.Modal.getInstance(document.getElementById('createCategoryModal'));
