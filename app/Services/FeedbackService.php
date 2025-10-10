@@ -34,5 +34,17 @@ class FeedbackService
         ];
     }
 
+    public static function confirm($icon = null, $title = null, $description = null, $btnText = null, $btnTextCancel = null, $methodConfirm = null){
+        return [
+            "icon" =>  $icon,
+            "title" => $title,
+            "html" =>   $description,
+            "btn" => true,
+            "btnCancel" => true,
+            "btnText" => $btnText,
+            "btnTextCancel" => $btnTextCancel,
+            "methodConfirm" => $methodConfirm,
+        ];
+    }
     
 }

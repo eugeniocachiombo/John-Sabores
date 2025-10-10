@@ -13,6 +13,7 @@ class AdminRecipeCategory extends Component
     use WithPagination;
 
     public $description, $id = null, $search = '';
+    public $listeners = ["confirmDelete" => "confirmDelete"];
 
     protected $rules = [
         'description' => 'required|unique:recipe_categories,description',
@@ -28,15 +29,16 @@ class AdminRecipeCategory extends Component
         return view('livewire.user.admin-recipe-category', [
             'categories' => $this->getCategories(),
         ])
-        ->layout("components.layouts.admin.app");
+            ->layout("components.layouts.admin.app");
     }
 
-    public function getCategories(){
+    public function getCategories()
+    {
         try {
             $query =  RecipeCategory::orderBy("description", "asc");
 
             if ($this->search) {
-                $query->where("description", "like", "%".$this->search."%");
+                $query->where("description", "like", "%" . $this->search . "%");
             }
             return $query->paginate(5);
         } catch (\Throwable $th) {
@@ -47,7 +49,7 @@ class AdminRecipeCategory extends Component
 
     public function store()
     {
-       
+
         $this->validate([
             'description' => 'required|unique:recipe_categories,description,' . $this->id,
         ], $this->messages);
@@ -73,7 +75,6 @@ class AdminRecipeCategory extends Component
             $category =  RecipeCategory::find($id);
             $this->id = $category->id;
             $this->description = $category->description;
-
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
             $this->dispatch("sweetalert", FeedbackService::fail());
@@ -86,7 +87,6 @@ class AdminRecipeCategory extends Component
 
         try {
 
-            
             RecipeCategory::where("id", $this->id)->update([
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
@@ -101,8 +101,21 @@ class AdminRecipeCategory extends Component
 
     public function delete($id)
     {
+        $this->id = $id;
+        $this->dispatch("sweetalert", FeedbackService::confirm(
+            "warning",
+            "Tens a Certeza Que Deseja Eliminar?",
+            'Após eliminar, será impossível reverter esta acção',
+            "Confirmar",
+            "Cancelar",
+            "confirmDelete",
+        ));
+    }
+
+    public function confirmDelete()
+    {
         try {
-            RecipeCategory::findOrFail($id)->delete();
+            RecipeCategory::findOrFail($this->id)->delete();
             $this->dispatch("sweetalert", FeedbackService::success());
             $this->clear();
         } catch (\Throwable $th) {
