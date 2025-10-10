@@ -86,11 +86,13 @@
                                 <td class="fw-semibold">{{ $category->description }}</td>
                                 <td>{{ $category->created_at->format('d/m/Y') }}</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-light-pink me-1" wire:click="edit({{ $category->id }})">
-                                        <i class="bi bi-pencil-square"></i>
+                                    <button class="btn btn-sm btn-light-pink me-1" data-bs-toggle="modal"
+                                        data-bs-target="#createCategoryModal"
+                                        wire:click.prevent="edit({{ $category->id }})">
+                                        <i class="fas fa-pencil-square " style="font-size: 18px"></i>
                                     </button>
                                     <button class="btn btn-sm btn-light-pink" wire:click="delete({{ $category->id }})">
-                                        <i class="bi bi-trash"></i>
+                                        <i class="fas fa-trash " style="font-size: 18px"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -99,6 +101,13 @@
                                 <td colspan="4" class="text-center text-muted">Nenhuma categoria cadastrada</td>
                             </tr>
                         @endforelse
+                        <tr>
+                            <td colspan="4" class="mt-2">
+                                @isset($categories)
+                                    {{ $categories->links('livewire::bootstrap') }}
+                                @endisset
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -106,25 +115,31 @@
     </div>
 
     {{-- Modal de Cadastro --}}
-    <div wire:ignore.self class="modal fade" id="createCategoryModal" tabindex="-1" aria-labelledby="createCategoryModalLabel" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="createCategoryModal" tabindex="-1"
+        aria-labelledby="createCategoryModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content shadow-lg">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createCategoryModalLabel">Cadastrar Categoria</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
                 </div>
-                <form wire:submit.prevent="store">
+                <form wire:submit.prevent="{{ $id != null ? 'update' : 'store' }}">
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="description" class="form-label fw-semibold">Descrição</label>
-                            <input type="text" id="description" class="form-control" wire:model="description" placeholder="Ex: Sobremesas">
-                            @error('description') <small class="text-danger">{{ $message }}</small> @enderror
+                            <input type="text" id="description" class="form-control" wire:model="description"
+                                placeholder="Ex: Sobremesas">
+                            @error('description')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-pink">
-                            <span wire:loading wire:target="store" class="spinner-border spinner-border-sm me-1"></span>
+                            <span wire:loading wire:target="{{ $id != null ? 'update' : 'store' }}"
+                                class="spinner-border spinner-border-sm me-1"></span>
                             Salvar
                         </button>
                     </div>

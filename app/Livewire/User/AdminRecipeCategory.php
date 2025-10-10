@@ -6,10 +6,13 @@ use App\Models\RecipeCategory;
 use App\Services\FeedbackService;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class AdminRecipeCategory extends Component
 {
-    public $description;
+    use WithPagination;
+
+    public $description, $id = null;
 
     protected $rules = [
         'description' => 'required|unique:recipe_categories,description',
@@ -23,16 +26,18 @@ class AdminRecipeCategory extends Component
     public function render()
     {
         return view('livewire.user.admin-recipe-category', [
-            'categories' => RecipeCategory::latest()->get(),
+            'categories' => RecipeCategory::orderBy("description", "asc")->paginate(5),
         ])
             ->layout("components.layouts.admin.app");
     }
 
 
-
     public function store()
     {
-        $this->validate();
+       
+        $this->validate([
+            'description' => 'required|unique:recipe_categories,description,' . $this->id,
+        ], $this->messages);
 
         try {
 
@@ -40,8 +45,41 @@ class AdminRecipeCategory extends Component
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
             ]);
+            $this->dispatch("sweetalert", FeedbackService::success());
+            $this->clear();
+        } catch (\Throwable $th) {
+            FeedbackService::register_log($th);
+            $this->dispatch("sweetalert", FeedbackService::fail());
+        }
+    }
 
-            $this->reset('description');
+    public function edit($id)
+    {
+        try {
+
+            $category =  RecipeCategory::find($id);
+            $this->id = $category->id;
+            $this->description = $category->description;
+
+        } catch (\Throwable $th) {
+            FeedbackService::register_log($th);
+            $this->dispatch("sweetalert", FeedbackService::fail());
+        }
+    }
+
+    public function update()
+    {
+        $this->validate();
+
+        try {
+
+            
+            RecipeCategory::where("id", $this->id)->update([
+                'description' => $this->description,
+                'user_id' => Auth::user()->id,
+            ]);
+            $this->dispatch("sweetalert", FeedbackService::success());
+            $this->clear();
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
             $this->dispatch("sweetalert", FeedbackService::fail());
@@ -52,10 +90,15 @@ class AdminRecipeCategory extends Component
     {
         try {
             RecipeCategory::findOrFail($id)->delete();
-            $this->reset('description');
+            $this->clear();
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
             $this->dispatch("sweetalert", FeedbackService::fail());
         }
+    }
+
+    public function clear()
+    {
+        $this->reset('description', 'id');
     }
 }

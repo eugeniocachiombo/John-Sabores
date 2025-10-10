@@ -18,9 +18,19 @@ class FeedbackService
         return [
             "icon" => $icon ?? "error",
             "title" => $title ?? "Erro!",
-            "html" =>  "<b>".  $description ?? 'Falha ao realizar operação' ."</b>",
+            "html" => $description ?? '<b>Falha ao realizar operação</b>',
             "btn" => true,
             "timer" => 40000,
+        ];
+    }
+
+    public static function success($icon = null, $title = null, $description = null)
+    {
+        return [
+            "icon" => $icon ?? "success",
+            "title" => $title ?? "Sucesso",
+            "html" =>   $description ?? '<b>Operação Realizada com Sucesso</b>',
+            "btn" => true,
         ];
     }
 
