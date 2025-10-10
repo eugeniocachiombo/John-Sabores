@@ -103,6 +103,7 @@ class AdminRecipeCategory extends Component
     {
         try {
             RecipeCategory::findOrFail($id)->delete();
+            $this->dispatch("sweetalert", FeedbackService::success());
             $this->clear();
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
