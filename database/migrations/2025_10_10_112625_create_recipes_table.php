@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->string("description");
+            $table->text("description");
             $table->string("photo")->nullable();
             $table->unsignedBigInteger("user_id")->nullable();
+            $table->unsignedBigInteger("category_id")->nullable();
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
+            $table->foreign("category_id")->references("id")->on("recipe_categories")->onDelete("cascade");
             $table->timestamps();
         });
     }

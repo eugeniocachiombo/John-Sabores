@@ -10,6 +10,15 @@ class Recipe extends Model
         "title",
         "description",
         "photo",
+        "category_id",
         "user_id",
     ];
+
+    public function category(){
+        return $this->belongsTo(RecipeCategory::class, "category_id");
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, "user_id");
+    }
 }
