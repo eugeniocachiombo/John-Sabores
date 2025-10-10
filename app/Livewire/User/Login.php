@@ -2,6 +2,7 @@
 
 namespace App\Livewire\User;
 
+use App\Services\ErrorMessage;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -43,8 +44,8 @@ class Login extends Component
             }
             
         } catch (\Throwable $th) {
-            //throw $th;
-            dd($th->getMessage());
+            ErrorMessage::register_log($th);
+            $this->dispatch("sweetalert", ErrorMessage::sweetalert());
         }
     }
 }
