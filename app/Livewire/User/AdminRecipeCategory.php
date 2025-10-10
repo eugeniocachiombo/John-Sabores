@@ -40,6 +40,7 @@ class AdminRecipeCategory extends Component
             if ($this->search) {
                 $query->where("description", "like", "%" . $this->search . "%");
             }
+
             return $query->paginate(5);
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
@@ -49,13 +50,8 @@ class AdminRecipeCategory extends Component
 
     public function store()
     {
-
-        $this->validate([
-            'description' => 'required|unique:recipe_categories,description,' . $this->id,
-        ], $this->messages);
-
+        $this->validate();
         try {
-
             RecipeCategory::create([
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
@@ -71,7 +67,6 @@ class AdminRecipeCategory extends Component
     public function edit($id)
     {
         try {
-
             $category =  RecipeCategory::find($id);
             $this->id = $category->id;
             $this->description = $category->description;
@@ -83,10 +78,11 @@ class AdminRecipeCategory extends Component
 
     public function update()
     {
-        $this->validate();
+        $this->validate([
+            'description' => 'required|unique:recipe_categories,description,' . $this->id,
+        ], $this->messages);
 
         try {
-
             RecipeCategory::where("id", $this->id)->update([
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
