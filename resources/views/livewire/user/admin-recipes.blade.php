@@ -44,7 +44,7 @@
                 <table class="table table-hover align-middle mb-0">
                     <thead>
                         <tr>
-                            <th>Foto</th>
+                            <th class="ms-2">Foto</th>
                             <th>Título</th>
                             <th>Categoria</th>
                             <th>Criada em</th>
@@ -54,16 +54,18 @@
                     <tbody>
                         @forelse ($recipes as $index => $recipe)
                             <tr>
-                                <td class="fw-semibold" style="max-width: 10px; max-height: 10px">
+                                <td class="fw-semibold " style="max-width: 10px; max-height: 10px">
 
-                                    @if ($recipe->title)
+                                    @if ($recipe->photo)
                                         <a href="{{ asset('storage/' . $recipe->photo) }}" target="_blank">
                                             <img src="{{ asset('storage/' . $recipe->photo) }}"
                                                 style="object-fit: cover; border: 2px solid pink; max-width: 50px; height: 50px"
                                                 class="img-fluid rounded-circle">
                                         </a>
                                     @else
-                                        ...
+                                        <i class="fas fa-image ms-2"
+                                            style="border-radius: 50%;max-width: 0px; height: 0px"
+                                            class="img-fluid rounded-circle"></i>
                                     @endif
 
                                 </td>

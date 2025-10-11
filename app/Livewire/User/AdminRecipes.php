@@ -47,7 +47,7 @@ class AdminRecipes extends Component
     public function getRecipes()
     {
         try {
-            $query =  Recipe::orderBy("title", "asc");
+            $query =  Recipe::orderBy("id", "desc");
 
             if ($this->search) {
                 $query->where("title", "like", "%" . $this->search . "%");
@@ -94,7 +94,7 @@ class AdminRecipes extends Component
     }
 
     public function edit($id)
-    {
+    { 
         try {
             $recipe =  Recipe::find($id);
             $this->recipeFound = $recipe;
