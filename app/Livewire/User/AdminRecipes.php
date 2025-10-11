@@ -102,8 +102,6 @@ class AdminRecipes extends Component
             $this->category_id = $recipe->category_id;
             $this->title = $recipe->title;
             $this->description = $recipe->description;
-
-            $this->photo = $recipe->photo;
         } catch (\Throwable $th) {
             FeedbackService::register_log($th);
             $this->dispatch("sweetalert", FeedbackService::fail());

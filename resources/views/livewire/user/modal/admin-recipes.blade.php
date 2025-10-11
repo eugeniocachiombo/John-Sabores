@@ -61,7 +61,7 @@
 
                          <!-- Pré-visualizador-->
                         <center>
-                            @if ($photo)
+                            @isset ($photo)
                                 <div class="my-3">
                                     <img src="{{ $photo->temporaryUrl() }}" alt="Pré-visualização da Foto"
                                         class="img-fluid rounded" style="max-height: 100px;"> <br>
@@ -70,7 +70,7 @@
                                         Remover Foto
                                     </button>
                                 </div>
-                            @endif
+                            @endisset
                         </center>
                     </div>
                 </div>
