@@ -26,7 +26,6 @@
                 <table class="table table-hover align-middle mb-0">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Descrição</th>
                             <th>Criada em</th>
                             <th class="text-center">Acções</th>
@@ -35,7 +34,6 @@
                     <tbody>
                         @forelse ($categories as $index => $category)
                             <tr>
-                                <td>{{ $index + 1 }}</td>
                                 <td class="fw-semibold">{{ $category->description }}</td>
                                 <td>{{ $category->created_at->format('d/m/Y') }}</td>
                                 <td class="text-center">
