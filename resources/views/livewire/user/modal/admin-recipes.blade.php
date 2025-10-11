@@ -48,6 +48,30 @@
                         @error('photo')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
+
+                        <!-- Barra de progresso simples com wire:loading -->
+                        <div class="my-2 w-100" wire:loading wire:target="photo">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                                    role="progressbar" style="width: 100%">
+                                    Carregando...
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Pré-visualizador-->
+                        <center>
+                            @if ($photo)
+                                <div class="my-3">
+                                    <img src="{{ $photo->temporaryUrl() }}" alt="Pré-visualização da Foto"
+                                        class="img-fluid rounded" style="max-height: 100px;"> <br>
+                                    <button type="button" class="btn btn-sm btn-danger mt-2"
+                                        wire:click="$set('photo', null)">
+                                        Remover Foto
+                                    </button>
+                                </div>
+                            @endif
+                        </center>
                     </div>
                 </div>
                 <div class="modal-footer">

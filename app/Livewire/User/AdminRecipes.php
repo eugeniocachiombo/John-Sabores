@@ -72,12 +72,18 @@ class AdminRecipes extends Component
     {
         $this->validate();
         try {
+
+            $path = null;
+            if ($this->photo) {
+                $path = $this->photo->store("recipes", "public");
+            }
+
             Recipe::create([
                 'category_id' => $this->category_id,
                 'title' => $this->title,
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
-                'photo' => $this->photo
+                'photo' => $path
             ]);
             $this->dispatch("sweetalert", FeedbackService::success());
             $this->clear();
@@ -111,12 +117,18 @@ class AdminRecipes extends Component
         ], $this->messages);
 
         try {
+
+            $path = null;
+            if ($this->photo) {
+                $path = $this->photo->store("recipes", "public");
+            }
+
             Recipe::where("id", $this->id)->update([
                 'category_id' => $this->category_id,
                 'title' => $this->title,
                 'description' => $this->description,
                 'user_id' => Auth::user()->id,
-                'photo' => $this->photo
+                'photo' => $path
             ]);
             $this->dispatch("sweetalert", FeedbackService::success());
             $this->clear();
