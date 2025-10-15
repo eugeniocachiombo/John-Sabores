@@ -94,7 +94,7 @@ class AdminRecipes extends Component
     }
 
     public function edit($id)
-    { 
+    {
         try {
             $recipe =  Recipe::find($id);
             $this->recipeFound = $recipe;
@@ -116,18 +116,21 @@ class AdminRecipes extends Component
 
         try {
 
-            $path = null;
-            if ($this->photo) {
-                $path = $this->photo->store("recipes", "public");
-            }
-
             Recipe::where("id", $this->id)->update([
                 'category_id' => $this->category_id,
                 'title' => $this->title,
                 'description' => $this->description,
-                'user_id' => Auth::user()->id,
-                'photo' => $path
+                'user_id' => Auth::user()->id
             ]);
+
+            $path = null;
+            if ($this->photo) {
+                $path = $this->photo->store("recipes", "public");
+                Recipe::where("id", $this->id)->update([
+                    'photo' => $path
+                ]);
+            }
+
             $this->dispatch("sweetalert", FeedbackService::success());
             $this->clear();
         } catch (\Throwable $th) {
