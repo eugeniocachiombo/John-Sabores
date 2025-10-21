@@ -41,7 +41,7 @@
                     <i class="fas fa-info-circle me-2"></i> Sobre
                 </h5>
                 <p class="mb-3">
-                    Uma empresa criada para apoiar confeiteiros com receitas caseiras e saborosas.
+                    Uma página web criada para apoiar confeiteiros com receitas caseiras e saborosas.
                 </p>
                 <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fas fa-eye me-2"></i> Saiba mais
