@@ -9,7 +9,7 @@
                 <i class="fa fa-list mb-3"></i>
                 <h5 class="fw-bold">Categorias</h5>
                 <p class="text-muted mb-2">Total: <strong>{{ count($categories) }}</strong></p>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
+                <a href="{{ route("admin.recipe.category") }}" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
             </div>
         </div>
 
@@ -18,7 +18,7 @@
                 <i class="fa fa-utensils mb-3"></i>
                 <h5 class="fw-bold">Receitas</h5>
                 <p class="text-muted mb-2">Total: <strong>{{ count($recipes) }}</strong></p>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
+                <a href="{{ route("admin.recipes") }}" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
             </div>
         </div>
 
@@ -27,7 +27,7 @@
                 <i class="fa fa-users mb-3"></i>
                 <h5 class="fw-bold">Usuários</h5>
                 <p class="text-muted mb-2">Total: <strong>{{ count($users) }}</strong></p>
-                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
+                <a href="{{ route("admin.users") }}" class="btn btn-sm btn-outline-primary rounded-pill">Ver mais</a>
             </div>
         </div>
     </div>
