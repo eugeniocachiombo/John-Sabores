@@ -61,7 +61,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg">
-            <div class="modal-header bg-primary text-white">
+            <div class="modal-header text-white" style="background: linear-gradient(135deg, #ff5f6d, #ffc371)">
                 <h5 class="modal-title" id="staticBackdropLabel">
                     <i class="fas fa-info-circle me-2"></i> Sobre a Empresa
                 </h5>
