@@ -25,6 +25,7 @@
                             <th>#</th>
                             <th>Nome</th>
                             <th>Email</th>
+                            <th>Acesso</th>
                             <th>Criado em</th>
                             <th class="text-center">Acções</th>
                         </tr>
@@ -35,6 +36,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td class="fw-semibold">{{ $user->name }}</td>
                                 <td class="fw-semibold">{{ $user->email }}</td>
+                                <td class="fw-semibold">{{ ucwords($user->access->description) }}</td>
                                 <td>{{ $user->created_at->format('d/m/Y') }}</td>
                                 <td class="text-center">
                                     @if (auth()->user()->access_id != 1)
@@ -48,7 +50,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="10" class="text-center text-muted">Nenhuma usuário encontrado</td>
+                                <td colspan="10" class="text-center text-muted">Nenhum usuário encontrado</td>
                             </tr>
                         @endforelse
                         <tr>
