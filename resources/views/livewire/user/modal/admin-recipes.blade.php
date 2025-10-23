@@ -4,7 +4,7 @@
         <div class="modal-content shadow-lg">
             <div class="modal-header">
                 <h5 class="modal-title" id="createRecipeModalLabel">
-                    {{ $id != null ? 'Editar Categoria' : 'Cadastrar Categoria' }}
+                    {{ $id != null ? 'Editar Receita' : 'Cadastrar Receita' }}
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Fechar"></button>

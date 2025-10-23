@@ -1,4 +1,4 @@
-@section('title', 'Categorias')
+@section('title', 'Receitas')
 <div>
     <link rel="stylesheet" href="{{ asset('assets/css/admin_crud.css') }}">
 

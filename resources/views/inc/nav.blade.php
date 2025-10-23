@@ -4,7 +4,7 @@
 
     <!-- Início -->
     <li>
-        <a href="{{ url('inicio') }}" class="menu-link text-white fw-semibold d-flex align-items-center">
+        <a href="{{ route('web.home') }}" class="menu-link text-white fw-semibold d-flex align-items-center">
             <i class="fa-solid fa-house me-2 icon"></i> Início
         </a>
     </li>
