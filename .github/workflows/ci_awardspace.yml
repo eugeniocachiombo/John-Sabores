@@ -12,3 +12,14 @@ jobs:
      steps:
      -  name: Baixar a pasta
         uses: actions/checkout@v3
+
+     -  name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # Diretório local a ser enviado
+          server-dir: /  # Diretório remoto no servidor FTP
+          protocol: ftp
+          port: 21
