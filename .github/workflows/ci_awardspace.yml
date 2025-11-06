@@ -6,9 +6,9 @@ on:
       - main
 jobs:
   build:
-     name: servidor
-     runs-on: ubuntu-server
+     name: Deploy
+     runs-on: ubuntu-latest
      
      steps:
-     -  name: Get latest code
+     -  name: Baixar a pasta
         uses: actions/checkout@v3
