@@ -3,7 +3,7 @@ name: Deploy to awardspace
 on:
   push:
     branches:
-      -main
+      - main
 jobs:
   build:
      name: servidor
