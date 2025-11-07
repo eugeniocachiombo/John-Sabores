@@ -14,9 +14,7 @@ jobs:
      - name: Baixar a pasta
        uses: actions/checkout@v3
        
-     - name: Executar script local
-       run: php install_composer.php
-
+  
 
 
      -  name: 📂 Sync files
