@@ -13,10 +13,6 @@ jobs:
      steps:
      - name: Baixar a pasta
        uses: actions/checkout@v3
-       
-     - name: Rodar composer no servidor via HTTP
-       run: curl http://jonhsabores.atwebpages.com/install_composer.php
-
 
      -  name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
