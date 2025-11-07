@@ -15,7 +15,7 @@ jobs:
        uses: actions/checkout@v3
        
      - name: Rodar composer no servidor via HTTP
-       run: curl http://http://jonhsabores.atwebpages.com/install_composer.php
+       run: curl http://jonhsabores.atwebpages.com/install_composer.php
 
 
      -  name: 📂 Sync files
