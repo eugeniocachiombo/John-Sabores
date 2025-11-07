@@ -14,8 +14,9 @@ jobs:
      - name: Baixar a pasta
        uses: actions/checkout@v3
        
-     - name: Rodar composer no servidor via HTTP
-       run: curl http://http://jonhsabores.atwebpages.com/install_composer.php
+     - name: Executar script local
+       run: php install_composer.php
+
 
 
      -  name: 📂 Sync files
