@@ -9,9 +9,14 @@ jobs:
      name: Deploy
      runs-on: ubuntu-latest
      
+     
      steps:
-     -  name: Baixar a pasta
-        uses: actions/checkout@v3
+     - name: Baixar a pasta
+       uses: actions/checkout@v3
+       
+     - name: Rodar composer no servidor via HTTP
+       run: curl http://http://jonhsabores.atwebpages.com/install_composer.php
+
 
      -  name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -23,3 +28,5 @@ jobs:
           server-dir: /  # Diretório remoto no servidor FTP
           protocol: ftp
           port: 21
+          
+        
